@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- !API URL -->
+<!-- *http://api.openweathermap.org/data/2.5/forecast?q=rasipuram&appid=bc1fcafd8aff393e20555bdef17066e8 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form class="search">
+            <input class="search-location" type="text">
+            <button type="submit">Find</button>
+        </form>
+        <div class="card">
+            <div class="main">
+                <div class="img">
+                </div>
+                <section class="weather">
+                    <div>
+                        <h2 class="description"></h2>
+                    </div>
+                    <div>
+                        <span class="temp"></span>
+                    </div>
+                </section>
+                <section class="location">
+                    <div>
+                        <h1 class="place"></h1>
+                    </div>
+                    <div>
+                        <h2 class="country"></h2>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>
